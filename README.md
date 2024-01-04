@@ -8,8 +8,8 @@
 | nick_name          | string | null: false                      |
 | family_name        | string | null: false                      |
 | first_name         | string | null: false                      |
-| family_name        | string | null: false                      |           
-| first_name         | string | null: false                      |
+| family_name_kana   | string | null: false                      |           
+| first_name_kana    | string | null: false                      |
 | email              | string | null: false, unique: true        |
 | encrypted_password | string | null: false                      |
 
@@ -22,10 +22,11 @@
 | Column             | Type       | Options                          |
 | ------------------ | ---------- | ---------------------------------|
 | user               | references | null: false, foreign_key: true   |
-| subsc_name         | string     |                                  |
+| subsc_name_id      | integer    | null: false                      |
 | start_date         | timestamps |                                  |           
-| end_date           | timestamps | null: false                      |
-| price              | integer    | null: false                      |
+| end_date           | timestamps |                                  |
+| description        | text       | null : false                     |
+| price              | string     | null: false                      |
 
 ### Association
  belongs_to :user
